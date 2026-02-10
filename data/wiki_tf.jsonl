@@ -1,1 +1,10 @@
-gfgf
+{"id":"1","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin was an English naturalist.","label":"true"}
+{"id":"2","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin was born in the United States.","label":"false"}
+{"id":"3","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin developed the theory of evolution by natural selection.","label":"true"}
+{"id":"4","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin was a professional football player.","label":"false"}
+{"id":"5","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin wrote On the Origin of Species.","label":"true"}
+{"id":"6","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin discovered electricity.","label":"false"}
+{"id":"7","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin studied at the University of Cambridge.","label":"true"}
+{"id":"8","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin traveled on the HMS Beagle.","label":"true"}
+{"id":"9","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin died in 1882.","label":"true"}
+{"id":"10","article":"Charles Darwin (Wikipedia)","statement":"Charles Darwin was born in 2001.","label":"false"}

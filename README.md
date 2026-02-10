@@ -7,27 +7,22 @@ google/flan-t5-small
 
 ## How to Run
 
-### Part 1 – Prompting Script
+### Part 1 – Prompting Script- This script sends a prompt to the model and prints the response.
 Run:
 python llm_prompt.py --prompt "Hello" --max_new_tokens 10 --temperature 0.0 --seed 0
 
-This script sends a prompt to the model and prints the response.
-
 ---
 
-### Part 2 – Wikipedia True/False Evaluation
+### Part 2 – Wikipedia True/False Evaluation- This script reads data/wiki_tf.jsonl and evaluates the model on 10 true/false statements about Charles Darwin.
 Run:
 python evaluate_wiki_tf.py
 
-This script reads data/wiki_tf.jsonl and evaluates the model on 10 true/false statements about Charles Darwin.
-
 ---
 
-### Part 3 – BoolQ Evaluation
+### Part 3 – BoolQ Evaluation- This script evaluates the model on a subset of the BoolQ yes/no question dataset.
+
 Run:
 python evaluate_boolq.py
-
-This script evaluates the model on a subset of the BoolQ yes/no question dataset.
 
 ---
 

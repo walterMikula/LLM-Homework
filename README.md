@@ -26,7 +26,7 @@ python evaluate_boolq.py
 
 ---
 
-## Results
+## Accuracy Results for part 2 and 3
 
 Wikipedia True/False Accuracy:
 0.600 (6/10)
@@ -35,3 +35,7 @@ BoolQ Accuracy:
 5/20
 
 ---
+
+## Discussion
+
+The model performed okay on the small wiki true/false dataset but it also many many mistakes. On the BoolQ dataset, the accuracy was lower. I think thats becuse the questions were on a variety of topics and the model did not have direct context. It shows that small LLMs can get you answers but they might be incorrect and untrustworthy. Especially without information to support its descision making, the model will perform very bad. I would not use this on an exam, but for the sake of the assignment it at least runs the code lol.

@@ -18,19 +18,15 @@ def normalize_tf(raw: str):
         return None
     text = raw.strip().lower()
 
-    # Most reliable: find the first true/false token
     m = re.search(r"\b(true|false)\b", text)
     if m:
         return m.group(1)
-
-    # Common weird outputs from small models:
-    # "t" / "f"
+# mappping t/f to true/false is common in some datasets, so it can handle that
     if text.startswith("t"):
         return "true"
     if text.startswith("f"):
         return "false"
-
-    # Sometimes they output 1/0
+# mapping 1/0 to true/false is common in some datasets, so it can handle that
     if text == "1":
         return "true"
     if text == "0":

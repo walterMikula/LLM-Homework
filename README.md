@@ -1,5 +1,10 @@
 # LLM Homework 1
 
+## Downloading the libraries
+Run:
+pip install numpy transformers datasets sentencepiece torch
+
+
 ## Model Used
 google/flan-t5-small
 
@@ -8,21 +13,21 @@ google/flan-t5-small
 ## How to Run
 
 ### Part 1 – Prompting Script- This script sends a prompt to the model and prints the response.
-Run:
-python llm_prompt.py --prompt "Hello" --max_new_tokens 10 --temperature 0.0 --seed 0
-
+How to Run:
+python llm_prompt.py --model google/flan-t5-small --prompt "Hello world" --max_new_tokens 128 --temperature 0.7 --seed 0
 ---
 
 ### Part 2 – Wikipedia True/False Evaluation- This script reads data/wiki_tf.jsonl and evaluates the model on 10 true/false statements about Charles Darwin.
-Run:
-python evaluate_wiki_tf.py
+How to run:
+python evaluate_wiki_tf.py --model google/flan-t5-small --data ./data/wiki_tf.jsonl --temperature 0.0 --seed 0
+
 
 ---
 
-### Part 3 – BoolQ Evaluation- This script evaluates the model on a subset of the BoolQ yes/no question dataset.
+### Part 3 – BoolQ Evaluation- This script evaluates the model on a subset of the BoolQ yes/no question dataset. 2 different experiments. Experiment A with passage and Experiment B without passage. 
 
 Run:
-python evaluate_boolq.py
+python evaluate_boolq.py --model google/flan-t5-small --n 100 --max_new_tokens 8 --seed 0
 
 ---
 
@@ -31,8 +36,9 @@ python evaluate_boolq.py
 Wikipedia True/False Accuracy:
 0.600 (6/10)
 
-BoolQ Accuracy:
-5/20
+BoolQ Accuracy with n = 100
+Experimetn A: 68% accuracy
+Experiment B: 41% accuracy
 
 ---
 

@@ -38,7 +38,7 @@ def ask_model(model, tokenizer, prompt: str, max_new_tokens: int):
 
 def eval_experiment(data, model, tokenizer, with_passage: bool, max_new_tokens: int):
     correct = 0
-    incorrect = []  # store up to 5
+    incorrect = []  # store up to 5 for req
 
     for ex in data:
         gold = "yes" if ex["answer"] else "no"
@@ -69,7 +69,7 @@ def eval_experiment(data, model, tokenizer, with_passage: bool, max_new_tokens: 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", type=str, default="google/flan-t5-small")
-    ap.add_argument("--n", type=int, default=100)  # choose N (50–200 typical)
+    ap.add_argument("--n", type=int, default=100) 
     ap.add_argument("--max_new_tokens", type=int, default=8)
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
@@ -98,7 +98,7 @@ def main():
     print(f"Experiment B (without passage) accuracy: {acc_b:.4f}")
     print()
 
-    print("Up to 5 incorrect (Experiment A):")
+    print("Experiment A:")
     for ex in wrong_a:
         print("- question:", ex["question"])
         print("  expected:", ex["expected"])
@@ -107,7 +107,7 @@ def main():
         print("  passage_snippet:", ex["passage"])
         print()
 
-    print("Up to 5 incorrect (Experiment B):")
+    print("Experiment B:")
     for ex in wrong_b:
         print("- question:", ex["question"])
         print("  expected:", ex["expected"])
